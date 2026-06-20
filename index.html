@@ -615,7 +615,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mb-12 border-b border-neutral-900 pb-12">
                 <div class="lg:col-span-2">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-[#F5C400]/10 text-[#F5C400] border border-[#F5C400]/20 mb-6">
-                         INSTITUTIONAL LIVE SIGNALS
+                        🎯 INSTITUTIONAL LIVE SIGNALS
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4 font-display-lg text-gradient-gold">
                         Real-Time Trade Stream Terminal
@@ -1003,38 +1003,52 @@
         }
 
         // Simulate Gateway Funnel Action
-        // Simulate Gateway Funnel Action
-function simulateJoin(platformName) {
-    const overlay = document.getElementById('redirect-overlay');
-    const progressBar = document.getElementById('redirect-progress');
-    const statusText = document.getElementById('redirect-status');
-    
-    overlay.classList.remove('hidden');
-    progressBar.style.width = '0%';
-    statusText.innerText = 'Initializing connection...';
+        function simulateJoin(platformName) {
+            const url = platformName === 'Discord' ? 'https://discord.com/invite/9gZ3JuKb9g' : 'https://t.me/your_telegram_channel';
+            
+            // モバイル判定
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += 20;
-        progressBar.style.width = `${progress}%`;
-        
-        if (progress === 40) {
-            statusText.innerText = `Requesting official ${platformName} authorization link...`;
-        } else if (progress === 80) {
-            statusText.innerText = 'Compiling member access token credentials...';
-        } else if (progress >= 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                overlay.classList.add('hidden');
-                // THIS IS THE EXACT REDIRECT LINK ADDED FOR DISCORD:
-                if (platformName === 'Discord') {
-                    window.open('https://discord.com/invite/9gZ3JuKb9g', '_blank');
-                }
+            if (isMobile) {
+                // [モバイルでの対策]:
+                // タップした瞬間(100% 同期型ユーザーアクションスレッド)で即時 location.href で移動させます。
+                // これにより Chrome / Safari のセキュリティポップアップガードを 100% 回避し、
+                // ディープリンクを働かせてスマホ内の Discord/Telegram アプリを直接起動します。
                 showPage(2);
-            }, 500);
+                window.location.href = url;
+            } else {
+                // [デスクトップ(PC)での対策]:
+                // クリックされた最初のスレッドで、まずは即時 window.open を同期実行(ポップアップ警告を完全に回避)
+                window.open(url, '_blank');
+
+                // バックグラウンドで現在のタブのアニメーションとPage 2への遷移を実行
+                const overlay = document.getElementById('redirect-overlay');
+                const progressBar = document.getElementById('redirect-progress');
+                const statusText = document.getElementById('redirect-status');
+                
+                overlay.classList.remove('hidden');
+                progressBar.style.width = '0%';
+                statusText.innerText = 'Initializing connection...';
+
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += 20;
+                    progressBar.style.width = `${progress}%`;
+                    
+                    if (progress === 40) {
+                        statusText.innerText = `Requesting official ${platformName} authorization link...`;
+                    } else if (progress === 80) {
+                        statusText.innerText = 'Compiling member access token credentials...';
+                    } else if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            overlay.classList.add('hidden');
+                            showPage(2);
+                        }, 500);
+                    }
+                }, 300);
+            }
         }
-    }, 300);
-}
 
         // Accordion helper for Mentorship Curriculum
         function toggleAccordion(id) {
