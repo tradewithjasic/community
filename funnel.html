@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Elite Forex Platform | Trade with Jasic</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tone.js for premium sound effects on live signal notification simulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #d4af37 0%, #f2ca50 50%, #d4af37 100%);
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+        }
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+        .vault-border {
+            border: 1px solid rgba(153, 144, 124, 0.2);
+        }
+        .vault-card {
+            background: rgba(31, 32, 32, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .vault-card:hover {
+            transform: translateY(-8px);
+            background: rgba(31, 32, 32, 0.6);
+            border-color: rgba(242, 202, 80, 0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .elite-glow {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .elite-glow:hover {
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.25), inset 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #e4e2e1 0%, #f2ca50 50%, #e4e2e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .blurple-gradient {
+            background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+        }
+        .telegram-gradient {
+            background: linear-gradient(135deg, #0088cc 0%, #0077b5 100%);
+        }
+        .vibrant-gold-btn {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            box-shadow: 0 0 25px rgba(242, 202, 80, 0.4);
+            transition: all 0.3s ease;
+        }
+        .vibrant-gold-btn:hover {
+            box-shadow: 0 0 35px rgba(242, 202, 80, 0.6);
+            transform: translateY(-2px);
+        }
+        .dark-glass {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#1f2020",
+                        "on-tertiary": "#2f3131",
+                        "outline-variant": "#4d4635",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c349",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "on-primary": "#3c2f00",
+                        "tertiary-container": "#b2b3b3",
+                        "background": "#131313",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "primary": "#f2ca50",
+                        "on-background": "#e4e2e1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#735c00",
+                        "surface-variant": "#353535",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-highest": "#353535",
+                        "on-surface": "#e4e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "secondary-container": "#474746",
+                        "on-secondary": "#313030",
+                        "inverse-on-surface": "#303030",
+                        "inverse-surface": "#e4e2e1",
+                        "primary-fixed": "#ffe088",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary-container": "#554300",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#434546",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#99907c",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-low": "#1b1c1c",
+                        "surface": "#131313",
+                        "surface-bright": "#393939",
+                        "tertiary": "#cecece",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-surface-variant": "#d0c5af",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "primary-container": "#d4af37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg": ["Montserrat"],
+                        "cta": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "cta": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-surface-variant z-50">
+        <nav class="flex justify-between items-center px-4 sm:px-6 md:px-margin-desktop h-20 max-w-container-max mx-auto flex-nowrap overflow-hidden">
+            <!-- Brand / Elegant responsive non-wrapping Logo -->
+            <div class="font-['Montserrat'] text-sm md:text-lg lg:text-xl font-extrabold tracking-widest uppercase cursor-pointer whitespace-nowrap flex items-center gap-1.5 shrink-0" onclick="switchMainTab('community')">
+                <span class="text-white">Trade with</span>
+                <span class="bg-gradient-to-r from-[#f2ca50] to-[#d4af37] bg-clip-text text-transparent font-black">Jasic</span>
+            </div>
+            
+            <!-- Desktop Navigation Menu (Visible only on medium screens and up) -->
+            <div class="hidden md:flex items-center gap-6 md:gap-8 shrink-0 flex-nowrap">
+                <button id="nav-desktop-mentorship" onclick="switchMainTab('mentorship')" class="text-on-surface-variant text-xs md:text-sm font-body-md hover:text-primary transition-colors duration-300 py-1 border-b-2 border-transparent whitespace-nowrap">
+                    Mentorship
+                </button>
+                <button id="nav-desktop-signals" onclick="switchMainTab('signals')" class="text-on-surface-variant text-xs md:text-sm font-body-md hover:text-primary transition-colors duration-300 py-1 border-b-2 border-transparent whitespace-nowrap">
+                    Signals
+                </button>
+                <button id="nav-desktop-community" onclick="switchMainTab('community')" class="text-primary font-bold text-xs md:text-sm border-b-2 border-primary py-1 whitespace-nowrap">
+                    Community
+                </button>
+            </div>
+            
+            <!-- Desktop Right hand Actions -->
+            <div class="hidden lg:flex items-center gap-6 shrink-0">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" onclick="switchMainTab('signals')">account_balance_wallet</span>
+                    <span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" onclick="switchMainTab('mentorship')">public</span>
+                </div>
+                <button onclick="switchMainTab('mentorship')" class="bg-primary text-on-primary font-cta px-6 py-2 rounded font-bold transition-transform active:scale-95">Enroll Now</button>
+            </div>
+
+            <!-- Mobile Hamburger Button (Visible only on mobile/tablet) -->
+            <button onclick="toggleMobileMenu()" class="flex md:hidden items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+                <span id="menu-icon" class="material-symbols-outlined text-2xl font-bold">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Slide-down Drawer Menu Container -->
+    <div id="mobile-drawer" class="fixed top-20 inset-x-0 bg-neutral-950/98 border-b border-neutral-900 z-40 transform -translate-y-full transition-all duration-300 md:hidden opacity-0 pointer-events-none">
+        <div class="flex flex-col p-6 gap-4 font-['Montserrat'] text-center">
+            <button id="nav-mobile-mentorship" onclick="mobileNavigate('mentorship')" class="text-on-surface-variant hover:text-primary transition-all text-sm py-2 block font-medium">
+                Mentorship
+            </button>
+            <button id="nav-mobile-signals" onclick="mobileNavigate('signals')" class="text-on-surface-variant hover:text-primary transition-all text-sm py-2 block font-medium">
+                Signals
+            </button>
+            <button id="nav-mobile-community" onclick="mobileNavigate('community')" class="text-primary font-bold transition-all text-sm py-2 block font-medium">
+                Community
+            </button>
+            <button onclick="mobileNavigate('mentorship-apply')" class="bg-primary text-on-primary font-cta py-3 rounded-xl font-bold mt-2 shadow-lg shadow-[#F5C400]/20 text-sm">
+                Enroll Now
+            </button>
+        </div>
+    </div>
+
+    <!-- REDIRECT OVERLAY ANIMATION -->
+    <div id="redirect-overlay" class="fixed inset-0 bg-neutral-950/95 z-50 flex flex-col items-center justify-center hidden transition-all duration-300">
+        <div class="text-center p-6 max-w-sm">
+            <div class="w-16 h-16 border-4 border-[#F5C400] border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+            <h3 class="text-xl font-bold text-white mb-2">Connecting to Community...</h3>
+            <div class="w-full bg-neutral-800 h-1.5 rounded-full mb-3 overflow-hidden">
+                <div id="redirect-progress" class="bg-[#F5C400] h-full w-0 transition-all duration-200"></div>
+            </div>
+            <p id="redirect-status" class="text-xs text-neutral-400">Initializing secure link...</p>
+        </div>
+    </div>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="flex-grow pt-24 relative overflow-hidden">
+        <!-- Ambient Background Glows -->
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full -z-10"></div>
+
+        <!-- ================= MAIN TAB 1: COMMUNITY ================= -->
+        <div id="main-tab-community" class="tab-content block">
+            
+            <!-- PAGE 1: THE GATEWAY -->
+            <section id="funnel-page-1" class="transition-all duration-500 block">
+                <!-- Hero Section -->
+                <div class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+                    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-[#F5C400]/10 text-[#F5C400] border border-[#F5C400]/20 mb-6">
+                            ⚡ Free Entry Active
+                        </span>
+
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6 font-display-lg text-gradient-gold">
+                            Stop Guessing the Gold Markets.<br>
+                            <span class="text-transparent bg-clip-text gold-gradient">Copy My Daily Trade Setups</span> for Free.
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed font-body-lg">
+                            I simplify XAU/USD trading. Get institutional-grade Forex signals, real-time market breakdowns, and professional mentorship—100% free to join.
+                        </p>
+
+                        <!-- Standardized Dynamic Buttons (Fixed Size & Symmetrical layout) -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto mb-8">
+                            <button onclick="simulateJoin('Discord')" class="w-full sm:w-64 h-14 flex items-center justify-center gap-3 px-8 rounded-xl font-bold text-white blurple-gradient hover:opacity-95 transform hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-lg shadow-[#5865F2]/20">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 127.14 96.36">
+                                    <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.43-5c.87-.64,1.71-1.32,2.51-2a75.64,75.64,0,0,0,72.71,0c.8.71,1.64,1.39,2.51,2a68.43,68.43,0,0,1-10.43,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31-18.83C129.87,49.86,123.3,27,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5.14-12.72,11.41-12.72S53.92,46,53.8,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53s5.14-12.72,11.41-12.72S96.11,46,96,53,90.93,65.69,84.69,65.69Z"/>
+                                </svg>
+                                Join Free Discord
+                            </button>
+                            <button onclick="simulateJoin('Telegram')" class="w-full sm:w-64 h-14 flex items-center justify-center gap-3 px-8 rounded-xl font-bold text-white telegram-gradient hover:opacity-95 transform hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-lg shadow-[#0088cc]/20">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.35-.49.97-.74 3.79-1.65 6.32-2.73 7.59-3.25 3.61-1.48 4.36-1.74 4.85-1.75.11 0 .35.03.5.16.13.12.16.29.18.41.02.13.01.27-.01.35z"/>
+                                </svg>
+                                Join Free Telegram
+                            </button>
+                        </div>
+
+                        <!-- Proof Micro-copy -->
+                        <p class="text-xs text-neutral-500 flex items-center justify-center gap-2">
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                            Join over <strong class="text-neutral-300">15,000+ active traders</strong> scaling accounts right now.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="max-w-container-max mx-auto px-6 py-12 border-t border-neutral-900">
+                    <h2 class="text-center text-2xl sm:text-3xl font-extrabold text-white mb-12 font-display-lg">Inside the Circle: What You Get</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="dark-glass p-8 rounded-2xl border border-neutral-800 relative overflow-hidden group hover:border-[#F5C400]/20 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-[#F5C400]/10 flex items-center justify-center text-[#F5C400] mb-6 border border-[#F5C400]/10">
+                                📈
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Free High-Probability Signals</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                Real-time entries, stop-losses, and multiple take-profit targets directly on your phone. Highly focused on volatile Gold (XAU/USD) setups.
+                            </p>
+                        </div>
+
+                        <div class="dark-glass p-8 rounded-2xl border border-neutral-800 relative overflow-hidden group hover:border-[#F5C400]/20 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-[#F5C400]/10 flex items-center justify-center text-[#F5C400] mb-6 border border-[#F5C400]/10">
+                                🤝
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Direct Mentorship</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                We don't just throw out numbers. We explain the institutional mechanics and logic behind every setup so you actually learn how to trade.
+                            </p>
+                        </div>
+
+                        <div class="dark-glass p-8 rounded-2xl border border-neutral-800 relative overflow-hidden group hover:border-[#F5C400]/20 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-[#F5C400]/10 flex items-center justify-center text-[#F5C400] mb-6 border border-[#F5C400]/10">
+                                👥
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Active Trader Community</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                Engage with an elite circle of motivated traders. Share chart mockups, discuss daily economic data, and grow together.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Lot Size Calculator Widget -->
+                <div class="max-w-4xl mx-auto px-6 py-12 border-t border-neutral-900">
+                    <div class="dark-glass rounded-3xl p-8 border border-neutral-800">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 text-center">Interactive Gold Pip Sizer</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 text-center mb-8">Calculate your exact position sizing instantly before entering a setup.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Account Balance ($)</label>
+                                <input id="calc-balance" type="number" value="10000" oninput="calculateLotSize()" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:border-[#F5C400] focus:ring-0">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Risk Percentage (%)</label>
+                                <input id="calc-risk" type="number" value="1" min="0.1" max="20" step="0.1" oninput="calculateLotSize()" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:border-[#F5C400] focus:ring-0">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Stop Loss (Pips)</label>
+                                <input id="calc-sl" type="number" value="30" oninput="calculateLotSize()" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:border-[#F5C400] focus:ring-0">
+                            </div>
+                        </div>
+
+                        <!-- Real-time Position Sizing Outputs -->
+                        <div class="mt-8 pt-8 border-t border-neutral-800/50 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div class="bg-neutral-950/40 p-4 rounded-xl border border-neutral-900">
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Risk Amount</span>
+                                <span id="calc-risk-cash" class="text-lg font-bold text-red-400">$100.00</span>
+                            </div>
+                            <div class="bg-neutral-950/40 p-4 rounded-xl border border-[#F5C400]/20">
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Standard Lots</span>
+                                <span id="calc-result-std" class="text-lg font-extrabold text-white">0.33 Lots</span>
+                            </div>
+                            <div class="bg-neutral-950/40 p-4 rounded-xl border border-neutral-900">
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Mini Lots</span>
+                                <span id="calc-result-mini" class="text-lg font-bold text-neutral-300">3.33 Minis</span>
+                            </div>
+                            <div class="bg-neutral-950/40 p-4 rounded-xl border border-neutral-900">
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Micro Lots</span>
+                                <span id="calc-result-micro" class="text-lg font-bold text-neutral-400">33.33 Micros</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authority Block -->
+                <div class="max-w-4xl mx-auto px-6 py-12 border-t border-neutral-900">
+                    <div class="dark-glass rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8 sm:gap-12 relative overflow-hidden border border-neutral-800">
+                        <div class="absolute -right-16 -top-16 w-48 h-48 bg-[#F5C400]/5 rounded-full blur-3xl"></div>
+                        
+                        <div class="w-32 h-32 sm:w-44 sm:h-44 rounded-2xl bg-neutral-800 border-2 border-neutral-700 flex-shrink-0 flex items-center justify-center text-4xl shadow-xl shadow-black/40">
+                            👑
+                        </div>
+
+                        <div class="text-center md:text-left">
+                            <h2 class="text-2xl font-bold text-white mb-4">Meet Your Mentor</h2>
+                            <p class="text-neutral-400 text-sm leading-relaxed mb-6 font-body-md">
+                                "I started trading Forex with one goal: complete freedom. After years of mastering Gold's unique volatility, I created this community to cut through the noise of the industry. I share my exact setups and daily strategies so you don't have to make the same costly mistakes I did."
+                            </p>
+                            <div class="inline-flex items-center gap-2 text-xs font-bold text-[#F5C400] uppercase tracking-wider">
+                                Professional XAU/USD Specialist
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE 2: THE VIP ACCELERATION -->
+            <section id="funnel-page-2" class="transition-all duration-500 hidden">
+                <div class="py-12 px-6 max-w-4xl mx-auto">
+                    <!-- Success Banner Header -->
+                    <div class="text-center mb-12">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
+                            🎉 Welcome to the Inner Circle
+                        </span>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 font-display-lg text-gradient-gold">
+                            You're In! Accessing Free Signals...
+                        </h1>
+                        <p class="text-neutral-400 max-w-xl mx-auto font-body-md">
+                            Please check your Discord or Telegram app to unlock your free alerts. <strong>But wait—do you want to fast-track your trading results?</strong>
+                        </p>
+                    </div>
+
+                    <!-- Comparison & Pitch Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <!-- Left Side Pitch Card -->
+                        <div class="dark-glass p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                    <span class="text-[#F5C400]">⚡</span> Upgrade to VIP & Mentorship
+                                </h3>
+                                <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                                    Free channels get you started. But to generate real trading independence, you need consistency, raw signal density, live market validation, and daily guidance from structured mentorship.
+                                </p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3 text-sm">
+                                        <span class="text-emerald-500">✔</span>
+                                        <span><strong>90%+ of My Trades:</strong> VIP is where I call every single entry.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm">
+                                        <span class="text-emerald-500">✔</span>
+                                        <span><strong>Live Video Sessions:</strong> Watch London/NY sessions as they unfold.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm">
+                                        <span class="text-emerald-500">✔</span>
+                                        <span><strong>Personal Direct Message Access:</strong> Ask questions, fix psychology instantly.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-neutral-800">
+                                <span class="text-xs text-neutral-500 block mb-1">VIP Tier Pricing</span>
+                                <span class="text-2xl font-black text-[#F5C400]">$49<span class="text-sm font-normal text-neutral-400">/month</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Right Side Feature Comparison Table -->
+                        <div class="dark-glass p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+                            <h4 class="text-lg font-bold text-white mb-6">Compare Plans</h4>
+                            <div class="space-y-4 text-sm">
+                                <div class="pb-3 border-b border-neutral-900 flex justify-between items-center">
+                                    <span class="text-neutral-400">Daily Gold Signals</span>
+                                    <span class="text-xs font-semibold px-2 py-0.5 rounded bg-neutral-800">1-2 per week</span>
+                                    <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#F5C400]/20 text-[#F5C400]">3-5 per day</span>
+                                </div>
+                                <div class="pb-3 border-b border-neutral-900 flex justify-between items-center">
+                                    <span class="text-neutral-400">Chart Breakdowns</span>
+                                    <span class="text-emerald-500 font-bold">✔</span>
+                                    <span class="text-[#F5C400] font-bold">✔ Live Videos</span>
+                                </div>
+                                <div class="pb-3 border-b border-neutral-900 flex justify-between items-center">
+                                    <span class="text-neutral-400">Direct Mentor DMs</span>
+                                    <span class="text-red-500 font-semibold">❌ None</span>
+                                    <span class="text-[#F5C400] font-bold">✔ VIP priority</span>
+                                </div>
+                                <div class="pb-3 border-b border-neutral-900 flex justify-between items-center">
+                                    <span class="text-neutral-400">Education Video Library</span>
+                                    <span class="text-red-500 font-semibold">❌ None</span>
+                                    <span class="text-[#F5C400] font-bold">✔ Masterclass</span>
+                                </div>
+                                <div class="pb-3 flex justify-between items-center">
+                                    <span class="text-neutral-400">VIP Giveaways & Events</span>
+                                    <span class="text-red-500 font-semibold">❌ None</span>
+                                    <span class="text-emerald-400 font-bold">✔ Included</span>
+                                </div>
+                            </div>
+
+                            <!-- Button Trigger for VIP -->
+                            <div class="mt-8">
+                                <button onclick="switchMainTab('mentorship')" class="w-full text-center px-6 py-3 rounded-xl font-bold bg-[#F5C400] hover:bg-[#d4af37] text-neutral-950 transition-colors shadow-lg shadow-[#F5C400]/20">
+                                    🔥 Secure VIP Access Now
+                                </button>
+                                <span class="block text-center text-[10px] text-neutral-500 mt-2">Risk-free subscription. Cancel anytime from user panel.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= MAIN TAB 2: MENTORSHIP (WORKING) ================= -->
+        <div id="main-tab-mentorship" class="tab-content hidden max-w-6xl mx-auto px-6 py-12">
+            <!-- Mentorship Hero -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-[#F5C400]/10 text-[#F5C400] border border-[#F5C400]/20 mb-6">
+                    🏆 ELITE MENTORSHIP
+                </span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6 font-display-lg text-gradient-gold">
+                    Learn to Master XAU/USD Like an Institution
+                </h1>
+                <p class="text-neutral-400 font-body-lg">
+                    Accelerate your learning curve with personalized feedback, premium modules, and structural risk management matrices directly under our trading desk guidance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Syllabus/Curriculum section (Left 2 columns) -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h2 class="text-2xl font-bold text-white mb-6 font-display-lg flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#F5C400]">school</span> 
+                        Trading Academy Curriculum
+                    </h2>
+                    
+                    <!-- Syllabus Item 1 (Interactive Open/Close) -->
+                    <div class="dark-glass rounded-2xl border border-neutral-800 overflow-hidden">
+                        <button onclick="toggleAccordion('syllabus-1')" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-neutral-900/30 transition-colors">
+                            <span class="font-bold text-white text-sm sm:text-base">Module 1: Market Structure & Order Flow Mechanics</span>
+                            <span id="icon-syllabus-1" class="material-symbols-outlined text-[#F5C400] transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div id="content-syllabus-1" class="hidden px-6 pb-6 border-t border-neutral-900/50 pt-4 text-sm text-neutral-400 space-y-2">
+                            <p>Understand the precise algorithmic cycles governing Gold and Major Forex pairs. Discover premium buy/sell delivery models and the differences between internal and external liquidity matrices.</p>
+                            <ul class="list-disc pl-5 space-y-1 text-xs text-[#F5C400]/80">
+                                <li>Algorithmic Daily Ranges & Time-of-Day Dynamics</li>
+                                <li>Identifying Market Structure Breaks (MSB) and Character Shift (CHoCH)</li>
+                                <li>Decoding Central Bank Liquidity Vaults</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus Item 2 -->
+                    <div class="dark-glass rounded-2xl border border-neutral-800 overflow-hidden">
+                        <button onclick="toggleAccordion('syllabus-2')" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-neutral-900/30 transition-colors">
+                            <span class="font-bold text-white text-sm sm:text-base">Module 2: Orderblocks & Volatility Execution Windows</span>
+                            <span id="icon-syllabus-2" class="material-symbols-outlined text-[#F5C400] transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div id="content-syllabus-2" class="hidden px-6 pb-6 border-t border-neutral-900/50 pt-4 text-sm text-neutral-400 space-y-2">
+                            <p>Master how to find validation areas and limit orders safely in the market with strict focus on XAU/USD's highly volatile movements.</p>
+                            <ul class="list-disc pl-5 space-y-1 text-xs text-[#F5C400]/80">
+                                <li>Mitigation & Order Block selection criteria</li>
+                                <li>Premium vs. Discount levels using refined Fibonacci setups</li>
+                                <li>Executing safely inside NY Killzone Volatility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus Item 3 -->
+                    <div class="dark-glass rounded-2xl border border-neutral-800 overflow-hidden">
+                        <button onclick="toggleAccordion('syllabus-3')" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-neutral-900/30 transition-colors">
+                            <span class="font-bold text-white text-sm sm:text-base">Module 3: Risk Allocation, Compounding, and Psychology</span>
+                            <span id="icon-syllabus-3" class="material-symbols-outlined text-[#F5C400] transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div id="content-syllabus-3" class="hidden px-6 pb-6 border-t border-neutral-900/50 pt-4 text-sm text-neutral-400 space-y-2">
+                            <p>Learn the psychological strategies of professional traders. Treat your retail account with Institutional Portfolio standards.</p>
+                            <ul class="list-disc pl-5 space-y-1 text-xs text-[#F5C400]/80">
+                                <li>The 1% Maximum Drawing Rules</li>
+                                <li>Compounding matrices to build multi-six figure accounts</li>
+                                <li>Avoiding over-leveraging and over-trading on London reversals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mentorship Booking Card (Right column) -->
+                <div>
+                    <div class="dark-glass p-8 rounded-3xl border border-[#F5C400]/30 relative overflow-hidden sticky top-32">
+                        <div class="absolute -right-12 -top-12 opacity-10">
+                            <span class="material-symbols-outlined text-[100px] text-[#F5C400]">military_tech</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2">Apply for Mentorship</h3>
+                        <p class="text-xs text-neutral-400 mb-6">Spots are strictly capped monthly to ensure high-quality individual attention.</p>
+                        
+                        <!-- Application Form Fields -->
+                        <form id="mentorship-form" onsubmit="submitMentorshipForm(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Full Name</label>
+                                <input required type="text" placeholder="John Doe" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-[#F5C400] focus:ring-0">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Trading Experience</label>
+                                <select required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-[#F5C400] focus:ring-0">
+                                    <option value="" disabled selected>Select level...</option>
+                                    <option value="beginner">Beginner (Under 6 months)</option>
+                                    <option value="intermediate">Intermediate (6 - 18 months)</option>
+                                    <option value="advanced">Advanced (Profitable / Funded)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">Your Biggest Trading Struggle</label>
+                                <textarea required rows="3" placeholder="Risk management, overtrading, discipline..." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-[#F5C400] focus:ring-0"></textarea>
+                            </div>
+                            <button type="submit" class="w-full text-center py-4 rounded-xl font-bold bg-[#F5C400] text-neutral-950 hover:bg-[#d4af37] transition-colors font-cta mt-4 shadow-lg shadow-[#F5C400]/20">
+                                Submit Application
+                            </button>
+                        </form>
+
+                        <!-- Form Submission Success Overlay -->
+                        <div id="mentorship-success-card" class="hidden absolute inset-0 bg-neutral-950 flex flex-col justify-center items-center p-6 text-center">
+                            <span class="material-symbols-outlined text-emerald-500 text-5xl mb-4 animate-bounce">check_circle</span>
+                            <h4 class="text-lg font-bold text-white mb-2">Application Received!</h4>
+                            <p class="text-xs text-neutral-400 max-w-xs leading-relaxed">
+                                Our Master Mentor is reviewing your submission. You will receive an outreach invite on your community portal profile within 15 minutes.
+                            </p>
+                            <button onclick="resetMentorshipForm()" class="mt-6 text-xs text-[#F5C400] underline font-semibold">Submit another application</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MAIN TAB 3: SIGNALS (WORKING) ================= -->
+        <div id="main-tab-signals" class="tab-content hidden max-w-6xl mx-auto px-6 py-12">
+            <!-- Signals Hero Banner -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mb-12 border-b border-neutral-900 pb-12">
+                <div class="lg:col-span-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-[#F5C400]/10 text-[#F5C400] border border-[#F5C400]/20 mb-6">
+                         INSTITUTIONAL LIVE SIGNALS
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4 font-display-lg text-gradient-gold">
+                        Real-Time Trade Stream Terminal
+                    </h1>
+                    <p class="text-neutral-400 leading-relaxed font-body-md">
+                        Watch setups execute in real-time. Signals include detailed analysis, Entry Points, Stop-Loss zones, and multiple Take-Profit levels.
+                    </p>
+                </div>
+                <!-- Mini Stats Widget -->
+                <div class="grid grid-cols-2 gap-4 bg-neutral-950/40 p-6 rounded-2xl border border-neutral-900">
+                    <div class="text-center">
+                        <span class="text-neutral-500 text-[10px] sm:text-xs uppercase font-semibold">Monthly Win Rate</span>
+                        <span class="block text-2xl sm:text-3xl font-extrabold text-[#F5C400] mt-1">84.2%</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-neutral-500 text-[10px] sm:text-xs uppercase font-semibold">Total Net Pips</span>
+                        <span class="block text-2xl sm:text-3xl font-extrabold text-emerald-400 mt-1">+2,430</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signal Simulator Controller (Let user test notifications) -->
+            <div class="dark-glass p-6 rounded-2xl border border-[#F5C400]/20 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[#F5C400]/10 flex items-center justify-center text-[#F5C400] shrink-0">
+                        <span class="material-symbols-outlined">notification_important</span>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Live Alert Simulator Engine</h4>
+                        <p class="text-xs text-neutral-400">Trigger a simulated system notification to test community delivery speed.</p>
+                    </div>
+                </div>
+                <button onclick="simulateLiveAlert()" class="bg-[#F5C400] text-neutral-950 font-bold px-6 py-2.5 rounded-lg text-xs hover:bg-[#d4af37] transition-all flex items-center gap-2 active:scale-95 shadow-md shadow-[#F5C400]/10">
+                    <span class="material-symbols-outlined text-sm">play_arrow</span> Trigger Signal Alert
+                </button>
+            </div>
+
+            <!-- Main Signals Terminal Interface -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Active Signal List -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#F5C400] animate-ping"></span> 
+                        Active Signal Stream
+                    </h3>
+                    
+                    <!-- Signal 1 -->
+                    <div class="dark-glass p-6 rounded-2xl border border-[#F5C400]/10 relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-[#F5C400]/20 text-[#F5C400] text-xs font-black uppercase px-2.5 py-1 rounded">XAUUSD</span>
+                                <span class="text-xs text-neutral-400 ml-2 font-label-mono">GOLD SPOT</span>
+                            </div>
+                            <span class="text-xs text-[#F5C400] font-bold uppercase tracking-wider flex items-center gap-1">
+                                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                ACTIVE ENTRY ZONE
+                            </span>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 text-center my-6 py-4 bg-neutral-950/40 rounded-xl border border-neutral-900/50">
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Execution</span>
+                                <span class="text-xs sm:text-base font-black text-white uppercase font-label-mono">BUY STOP</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Entry Price</span>
+                                <span class="text-xs sm:text-base font-black text-[#F5C400] font-label-mono">2034.50</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Current Price</span>
+                                <span id="xau-live-price" class="text-xs sm:text-base font-black text-neutral-300 font-label-mono">2034.42</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs font-label-mono text-neutral-400">
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Stop-Loss</span>
+                                <span class="text-red-400 font-bold">2031.00</span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 1</span>
+                                <span class="text-emerald-400 font-bold">2037.00 <span class="text-[9px] text-neutral-500">(+25 Pips)</span></span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 2</span>
+                                <span class="text-emerald-400 font-bold">2041.50 <span class="text-[9px] text-neutral-500">(+70 Pips)</span></span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 3</span>
+                                <span class="text-emerald-400 font-bold">2048.00 <span class="text-[9px] text-neutral-500">(+135 Pips)</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Signal 2 -->
+                    <div class="dark-glass p-6 rounded-2xl border border-neutral-900">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-neutral-800 text-neutral-300 text-xs font-black uppercase px-2.5 py-1 rounded">EURUSD</span>
+                                <span class="text-xs text-neutral-400 ml-2 font-label-mono">EURO / US DOLLAR</span>
+                            </div>
+                            <span class="text-xs text-neutral-500 font-semibold uppercase tracking-wider">
+                                PENDING EXECUTION
+                            </span>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 text-center my-6 py-4 bg-neutral-950/40 rounded-xl border border-neutral-900/50">
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Execution</span>
+                                <span class="text-xs sm:text-base font-black text-white uppercase font-label-mono">SELL LIMIT</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Entry Price</span>
+                                <span class="text-xs sm:text-base font-black text-neutral-300 font-label-mono">1.08650</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-neutral-500 uppercase tracking-widest block mb-1">Current Price</span>
+                                <span class="text-xs sm:text-base font-black text-neutral-400 font-label-mono">1.08595</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs font-label-mono text-neutral-400">
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Stop-Loss</span>
+                                <span class="text-neutral-500 font-bold">1.08800</span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 1</span>
+                                <span class="text-neutral-500 font-bold">1.08450</span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 2</span>
+                                <span class="text-neutral-500 font-bold">1.08200</span>
+                            </div>
+                            <div class="bg-neutral-900/30 p-2.5 rounded border border-neutral-850">
+                                <span class="text-[10px] text-neutral-500 block">Take Profit 3</span>
+                                <span class="text-neutral-500 font-bold">1.07850</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closed Trade History List -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> 
+                        Closed Trade History
+                    </h3>
+                    <div class="dark-glass p-6 rounded-2xl border border-neutral-900 space-y-4">
+                        <!-- History Item 1 -->
+                        <div class="pb-3 border-b border-neutral-900 flex justify-between items-center text-xs">
+                            <div>
+                                <span class="text-white font-bold block">XAUUSD (GOLD)</span>
+                                <span class="text-neutral-500 font-label-mono">Sell @ 2028.50</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-400 font-bold block">+50 Pips</span>
+                                <span class="text-neutral-500 text-[10px]">Hit TP2</span>
+                            </div>
+                        </div>
+                        
+                        <!-- History Item 2 -->
+                        <div class="pb-3 border-b border-neutral-900 flex justify-between items-center text-xs">
+                            <div>
+                                <span class="text-white font-bold block">XAUUSD (GOLD)</span>
+                                <span class="text-neutral-500 font-label-mono">Buy @ 2011.20</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-400 font-bold block">+120 Pips</span>
+                                <span class="text-neutral-500 text-[10px]">Hit TP3</span>
+                            </div>
+                        </div>
+
+                        <!-- History Item 3 -->
+                        <div class="pb-3 border-b border-neutral-900 flex justify-between items-center text-xs">
+                            <div>
+                                <span class="text-white font-bold block">GBPUSD</span>
+                                <span class="text-neutral-500 font-label-mono">Buy @ 1.25850</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-red-400 font-bold block">-25 Pips</span>
+                                <span class="text-neutral-500 text-[10px]">Hit SL</span>
+                            </div>
+                        </div>
+
+                        <!-- History Item 4 -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div>
+                                <span class="text-white font-bold block">EURUSD</span>
+                                <span class="text-neutral-500 font-label-mono">Sell @ 1.08920</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-400 font-bold block">+35 Pips</span>
+                                <span class="text-neutral-500 text-[10px]">Hit TP1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live System Notification Panel for Signals Simulation -->
+        <div id="live-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 max-w-sm w-full bg-neutral-950 border border-[#F5C400] rounded-2xl shadow-2xl p-4 flex gap-3">
+            <span class="material-symbols-outlined text-[#F5C400] text-3xl shrink-0">notifications_active</span>
+            <div>
+                <h4 class="text-sm font-bold text-white">🔔 SIMULATED SIGNAL ALERT</h4>
+                <p id="notif-content" class="text-xs text-neutral-400 mt-1 font-label-mono"></p>
+                <button onclick="dismissNotification()" class="text-[10px] text-neutral-500 font-bold mt-2 hover:text-white uppercase">Dismiss alert</button>
+            </div>
+        </div>
+
+        <!-- Trading Ticker Component -->
+        <div class="w-full bg-surface-container-lowest py-3 overflow-hidden whitespace-nowrap border-y border-outline-variant mt-12">
+            <div class="inline-block animate-[scroll_40s_linear_infinite]">
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">EURUSD</span> <span class="text-primary">1.0842</span> <span class="text-green-500">+0.12%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">GBPUSD</span> <span class="text-primary">1.2631</span> <span class="text-green-500">+0.05%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">XAUUSD</span> <span class="text-primary">2034.45</span> <span class="text-red-500">-0.21%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">BTCUSD</span> <span class="text-primary">52140.2</span> <span class="text-green-500">+1.42%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">USDJPY</span> <span class="text-primary">150.12</span> <span class="text-red-500">-0.08%</span></span>
+                <!-- Repeat for seamless scroll -->
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">EURUSD</span> <span class="text-primary">1.0842</span> <span class="text-green-500">+0.12%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">GBPUSD</span> <span class="text-primary">1.2631</span> <span class="text-green-500">+0.05%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">XAUUSD</span> <span class="text-primary">2034.45</span> <span class="text-red-500">-0.21%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">BTCUSD</span> <span class="text-primary">52140.2</span> <span class="text-green-500">+1.42%</span></span>
+                <span class="font-label-mono mx-8"><span class="text-on-surface-variant">USDJPY</span> <span class="text-primary">150.12</span> <span class="text-red-500">-0.08%</span></span>
+            </div>
+        </div>
+    </main>
+
+    <!-- SideNavBar Social Floating -->
+    <aside class="hidden lg:flex flex-col py-base h-full w-20 fixed left-0 top-0 bg-surface-container border-r border-outline-variant justify-center items-center gap-6 z-40">
+        <div onclick="switchMainTab('mentorship')" class="hover:bg-surface-variant/50 transition-all p-3 rounded-lg group cursor-pointer">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">photo_camera</span>
+        </div>
+        <div onclick="switchMainTab('signals')" class="hover:bg-surface-variant/50 transition-all p-3 rounded-lg group cursor-pointer">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">close</span>
+        </div>
+        <div onclick="switchMainTab('community')" class="hover:bg-surface-variant/50 transition-all p-3 rounded-lg group cursor-pointer">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">play_circle</span>
+        </div>
+        <div onclick="switchMainTab('mentorship')" class="hover:bg-surface-variant/50 transition-all p-3 rounded-lg group cursor-pointer mt-12">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">headset_mic</span>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="w-full mt-12 bg-surface-container-lowest border-t border-outline-variant py-12 px-6 flex flex-col items-center gap-4">
+        <div class="font-display-lg text-headline-lg text-primary mb-2">Trade with Jasic</div>
+        <div class="flex flex-wrap justify-center gap-8 mb-6">
+            <a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+            <a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Risk Disclosure</a>
+            <a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+            <a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+        </div>
+        <p class="text-[10px] sm:text-xs text-neutral-600 leading-relaxed max-w-2xl mx-auto text-center font-body-md">
+            <strong>Disclaimer:</strong> Trading foreign exchange (Forex) and spot metals like Gold on margin carries a high level of risk and may not be suitable for all investors. Leverage can work against you as well as for you. All analysis and signals are shared strictly for educational purposes.
+        </p>
+        <p class="font-label-mono text-[10px] text-on-surface-variant text-center opacity-50 tracking-widest">
+            © 2026 FX ELITE TRADING GROUP. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.97)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+        // Mobile Menu Drawer Toggling Engine
+        function toggleMobileMenu(forceState) {
+            const drawer = document.getElementById('mobile-drawer');
+            const icon = document.getElementById('menu-icon');
+            if (!drawer || !icon) return;
+
+            const isOpen = drawer.classList.contains('translate-y-0');
+            const shouldOpen = (forceState !== undefined) ? forceState : !isOpen;
+
+            if (shouldOpen) {
+                drawer.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                drawer.classList.add('translate-y-0', 'opacity-100');
+                icon.innerText = 'close';
+            } else {
+                drawer.classList.remove('translate-y-0', 'opacity-100');
+                drawer.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                icon.innerText = 'menu';
+            }
+        }
+
+        // Handle navigation inside the mobile drawer menu
+        function mobileNavigate(tabId) {
+            toggleMobileMenu(false); // Auto close mobile drawer menu
+            
+            if (tabId === 'mentorship-apply') {
+                switchMainTab('mentorship');
+                setTimeout(() => {
+                    const formElement = document.getElementById('mentorship-form');
+                    if (formElement) {
+                        formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 350);
+            } else {
+                switchMainTab(tabId);
+            }
+        }
+
+        // Main Tab Switcher Engine
+        function switchMainTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+                tab.classList.remove('block');
+            });
+            
+            // Show requested tab content
+            const activeTab = document.getElementById(`main-tab-${tabId}`);
+            if (activeTab) {
+                activeTab.classList.remove('hidden');
+                activeTab.classList.add('block');
+            }
+
+            // Update Header Styles for both Desktop and Mobile elements
+            const desktopNavs = {
+                mentorship: document.getElementById('nav-desktop-mentorship'),
+                signals: document.getElementById('nav-desktop-signals'),
+                community: document.getElementById('nav-desktop-community')
+            };
+
+            const mobileNavs = {
+                mentorship: document.getElementById('nav-mobile-mentorship'),
+                signals: document.getElementById('nav-mobile-signals'),
+                community: document.getElementById('nav-mobile-community')
+            };
+
+            // Reset Desktop Navigation Classes
+            Object.values(desktopNavs).forEach(nav => {
+                if (nav) {
+                    nav.className = "text-on-surface-variant text-xs md:text-sm font-body-md hover:text-primary transition-colors duration-300 py-1 border-b-2 border-transparent whitespace-nowrap";
+                }
+            });
+            // Reset Mobile Navigation Classes
+            Object.values(mobileNavs).forEach(nav => {
+                if (nav) {
+                    nav.className = "text-on-surface-variant hover:text-primary transition-all text-sm py-2 block font-medium";
+                }
+            });
+
+            // Set Active Desktop tab
+            if (desktopNavs[tabId]) {
+                desktopNavs[tabId].className = "text-primary font-bold text-xs md:text-sm border-b-2 border-primary py-1 whitespace-nowrap";
+            }
+            // Set Active Mobile tab
+            if (mobileNavs[tabId]) {
+                mobileNavs[tabId].className = "text-primary font-extrabold text-sm py-2 block border-l-2 border-primary pl-3 bg-primary/5 rounded-r-lg";
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Funnel Simulation Show Page 1 / Page 2
+        function showPage(pageNum) {
+            const page1 = document.getElementById('funnel-page-1');
+            const page2 = document.getElementById('funnel-page-2');
+
+            if (pageNum === 1) {
+                page1.classList.remove('hidden');
+                page1.classList.add('block');
+                page2.classList.add('hidden');
+                page2.classList.remove('block');
+            } else {
+                page1.classList.add('hidden');
+                page1.classList.remove('block');
+                page2.classList.remove('hidden');
+                page2.classList.add('block');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Simulate Gateway Funnel Action
+        // Simulate Gateway Funnel Action
+function simulateJoin(platformName) {
+    const overlay = document.getElementById('redirect-overlay');
+    const progressBar = document.getElementById('redirect-progress');
+    const statusText = document.getElementById('redirect-status');
+    
+    overlay.classList.remove('hidden');
+    progressBar.style.width = '0%';
+    statusText.innerText = 'Initializing connection...';
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 20;
+        progressBar.style.width = `${progress}%`;
+        
+        if (progress === 40) {
+            statusText.innerText = `Requesting official ${platformName} authorization link...`;
+        } else if (progress === 80) {
+            statusText.innerText = 'Compiling member access token credentials...';
+        } else if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                // THIS IS THE EXACT REDIRECT LINK ADDED FOR DISCORD:
+                if (platformName === 'Discord') {
+                    window.open('https://discord.com/invite/9gZ3JuKb9g', '_blank');
+                }
+                showPage(2);
+            }, 500);
+        }
+    }, 300);
+}
+
+        // Accordion helper for Mentorship Curriculum
+        function toggleAccordion(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Mentorship Booking Submission Simulation
+        function submitMentorshipForm(event) {
+            event.preventDefault();
+            document.getElementById('mentorship-success-card').classList.remove('hidden');
+        }
+
+        // Reset mentorship application states
+        function resetMentorshipForm() {
+            document.getElementById('mentorship-form').reset();
+            document.getElementById('mentorship-success-card').classList.add('hidden');
+        }
+
+        // Interactive Gold Lot Size Calculator (XAUUSD Standard Lot = $10/pip)
+        function calculateLotSize() {
+            const balance = parseFloat(document.getElementById('calc-balance').value) || 0;
+            const risk = parseFloat(document.getElementById('calc-risk').value) || 0;
+            const stoploss = parseFloat(document.getElementById('calc-sl').value) || 0;
+
+            const riskCashEl = document.getElementById('calc-risk-cash');
+            const stdEl = document.getElementById('calc-result-std');
+            const miniEl = document.getElementById('calc-result-mini');
+            const microEl = document.getElementById('calc-result-micro');
+
+            if (balance <= 0 || risk <= 0 || stoploss <= 0) {
+                if (riskCashEl) riskCashEl.innerText = '$0.00';
+                if (stdEl) stdEl.innerText = '0.00 Lots';
+                if (miniEl) miniEl.innerText = '0.00 Minis';
+                if (microEl) microEl.innerText = '0.00 Micros';
+                return;
+            }
+
+            // Cash amount risked
+            const riskAmount = balance * (risk / 100);
+            
+            // Standard Lot equation for Gold Spot (XAUUSD):
+            // 1 Standard Lot Pip value = $10.00 (based on standard $0.10 price movement = 1 pip)
+            // standard lot value formula: Lots = Risk Amount / (Stop Loss pips * $10)
+            const stdLots = riskAmount / (stoploss * 10);
+            const miniLots = stdLots * 10;
+            const microLots = stdLots * 100;
+            
+            // Display outputs
+            if (riskCashEl) riskCashEl.innerText = `$${riskAmount.toFixed(2)}`;
+            if (stdEl) stdEl.innerText = `${stdLots.toFixed(2)} Lots`;
+            if (miniEl) miniEl.innerText = `${miniLots.toFixed(2)} Minis`;
+            if (microEl) microEl.innerText = `${microLots.toFixed(2)} Micros`;
+        }
+
+        // Initialize Pip Sizer calculation right away when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            calculateLotSize();
+            // Initialize main nav tab visual triggers
+            switchMainTab('community');
+        });
+
+        // Live updating simulation for signals page live price tick
+        let xauPrice = 2034.42;
+        setInterval(() => {
+            const change = (Math.random() - 0.5) * 0.15;
+            xauPrice = Math.max(2010, Math.min(2060, xauPrice + change));
+            const livePriceEl = document.getElementById('xau-live-price');
+            if (livePriceEl) {
+                livePriceEl.innerText = xauPrice.toFixed(2);
+            }
+        }, 1000);
+
+        // Sound Engine and live alert simulation helper
+        function simulateLiveAlert() {
+            // Custom sound synthesis via Web Audio (Tone.js)
+            try {
+                const synth = new Tone.Synth().toDestination();
+                // Play double high-pitch chime alert
+                synth.triggerAttackRelease("C6", "16n", Tone.now());
+                synth.triggerAttackRelease("E6", "16n", Tone.now() + 0.08);
+            } catch (e) {
+                console.log("Audio not allowed yet until click interact.");
+            }
+
+            const goldSignals = [
+                "SELL STOP XAUUSD @ 2033.00, SL: 2036.00, TP: 2025.00",
+                "BUY LIMIT EURUSD @ 1.08450, SL: 1.08200, TP: 1.08900",
+                "BUY MARKET XAUUSD @ 2034.80, SL: 2031.50, TP: 2045.00"
+            ];
+            
+            const randomSignal = goldSignals[Math.floor(Math.random() * goldSignals.length)];
+            
+            // Show custom visual notification box
+            const notifBox = document.getElementById('live-notification');
+            const notifContent = document.getElementById('notif-content');
+            
+            notifContent.innerText = randomSignal;
+            notifBox.classList.remove('translate-y-24', 'opacity-0');
+            notifBox.classList.add('translate-y-0', 'opacity-100');
+        }
+
+        function dismissNotification() {
+            const notifBox = document.getElementById('live-notification');
+            notifBox.classList.add('translate-y-24', 'opacity-0');
+            notifBox.classList.remove('translate-y-0', 'opacity-100');
+        }
+    </script>
+</body>
+</html>
